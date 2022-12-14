@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage[] idleRight = new GreenfootImage[8];
-    GreenfootImage[] idleLeft = new GreenfootImage[8];
+    GreenfootImage[] idleRight = new GreenfootImage[4];
+    GreenfootImage[] idleLeft = new GreenfootImage[4];
 
     // Direction the elephant is facing
     String facing = "right";
@@ -45,7 +45,7 @@ public class Elephant extends Actor
     int imageIndex = 0;
     public void animateElephant()
     {
-        if(animationTimer.millisElapsed() < 100)
+        if(animationTimer.millisElapsed() < 400)
         {
             return;
         }

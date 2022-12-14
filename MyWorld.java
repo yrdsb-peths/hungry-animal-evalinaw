@@ -36,8 +36,12 @@ public class MyWorld extends World
      */
     public void gameOver()
     {
-        Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel, 300, 200);
+        Label gameOverLabel1 = new Label("┌── ⋆⋅☆⋅⋆ ──┐", 100);
+        Label gameOverLabel2 = new Label("game over !", 70);
+        Label gameOverLabel3 = new Label("└── ⋆⋅☆⋅⋆ ──┘", 100);
+        addObject(gameOverLabel3, 390, 200);
+        addObject(gameOverLabel2, 300, 150);
+        addObject(gameOverLabel1, 390, 100);
     }
     /**
      * Increase score
