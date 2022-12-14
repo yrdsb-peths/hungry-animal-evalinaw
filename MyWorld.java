@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The World our hero lives in.
+ * The World our hero lives in. felix was here
  * 
  * @author Wang
  * @version December 2022
