@@ -30,6 +30,7 @@ public class Apple extends Actor
         }
     }
     
+    //Set the apple speed
     public void setSpeed(int spd)
     {
         speed = spd;
