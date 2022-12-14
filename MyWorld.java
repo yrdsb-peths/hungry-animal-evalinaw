@@ -29,6 +29,8 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         createApple();
+        
+        createEvilStar();
     }
     
     /**
@@ -66,5 +68,19 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    public void createEvilStar()
+    {
+        EvilStar evilStar = new EvilStar();
+        evilStar.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(evilStar, x, y);
+    }
+    
+    public void decreaseScore()
+    {
+        score--;
     }
 }

@@ -96,6 +96,8 @@ public class Elephant extends Actor
         world.createApple();
         world.increaseScore();
         elephantSound.play();
+        world.createEvilStar();
+        world.decreaseScore();
         }
     }
 }
