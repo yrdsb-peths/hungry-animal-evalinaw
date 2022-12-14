@@ -68,12 +68,12 @@ public class Elephant extends Actor
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            move(-4);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(4);
             facing = "right";
         }
         
@@ -91,13 +91,18 @@ public class Elephant extends Actor
     {
         if(isTouching(Apple.class))
         {
-        removeTouching(Apple.class);
-        MyWorld world = (MyWorld) getWorld();
-        world.createApple();
-        world.increaseScore();
-        elephantSound.play();
-        world.createEvilStar();
-        world.decreaseScore();
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            world.increaseScore();
+            elephantSound.play();
+        
+        }
+        if(isTouching(EvilStar.class))
+        {
+            removeTouching(EvilStar.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.decreaseScore();
         }
     }
 }

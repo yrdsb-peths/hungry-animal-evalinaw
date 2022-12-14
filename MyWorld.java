@@ -10,7 +10,8 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
-    int level = 1;
+    int level = 3;
+    int count;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -32,7 +33,12 @@ public class MyWorld extends World
         
         createEvilStar();
     }
-    
+    public void act(){
+        count++;
+        if(count%200==0){
+            createEvilStar();
+        }
+    }
     /**
      * End the game and draw 'GameOver'
      */
@@ -52,7 +58,6 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
-        
         if(score % 5 == 0)
         {
             level += 1;
@@ -75,12 +80,13 @@ public class MyWorld extends World
         EvilStar evilStar = new EvilStar();
         evilStar.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
+        int y = -100;
         addObject(evilStar, x, y);
     }
     
     public void decreaseScore()
     {
         score--;
+        scoreLabel.setValue(score);
     }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Apple extends Actor
 {
-    int speed = 1;
+    int speed = 3;
     
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
