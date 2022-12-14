@@ -24,7 +24,6 @@ public class EvilStar extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
         {
-            world.decreaseScore();
             world.removeObject(this);
         }
     }
